@@ -17,5 +17,6 @@ test:
 
 production:
   <<: *default
-  database: test_api_production
+  database: <%= ENV.fetch('DATABASE_NAME') {'test_api_production'} %>
+  uri: <%= ENV.fetch('DATABASE_URL') {'postgres://postgres:postgres@localhost:5432'} %>
 
