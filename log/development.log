@@ -1,0 +1,12 @@
+  [1m[35m (16.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "testAPI_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "testAPI_test"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (86.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "test_api_development"[0m
+  [1m[35m (32.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "test_api_test"[0m
+  [1m[35m (409.4ms)[0m  [1m[35mCREATE DATABASE "test_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (60.8ms)[0m  [1m[35mCREATE DATABASE "test_api_test" ENCODING = 'unicode'[0m
