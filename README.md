@@ -1,24 +1,40 @@
-# README
+**Testcase for Tripment**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails API main function is search medical procedures by name.
 
-Things you may want to cover:
+1) Ruby 2.7.1/ Rails 6.0.3.3
+2) Searchkick + ES(Bonsai)
+3) Rspec/Shoulda/Factory
 
-* Ruby version
+**Usage:**
 
-* System dependencies
+https://testcase-tripment.herokuapp.com/api/v1/procedures - list all existing procedures
 
-* Configuration
+https://testcase-tripment.herokuapp.com/api/v1/procedures?name= - list all procedures that matches this param
 
-* Database creation
+**Example**
 
-* Database initialization
+https://testcase-tripment.herokuapp.com/api/v1/procedures?name=Med
 
-* How to run the test suite
+curl -X GET 'https://testcase-tripment.herokuapp.com/api/v1/procedures?name=Med'
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+response 
+```
+{"data":
+    [{
+      "id":"142",
+      "type":"procedure",
+      "attributes":{
+        "name":"Medical inspection",
+        "procedure_type":"propaedeutic"
+      }
+     },
+     {
+       "id":"249",
+       "type":"procedure",
+       "attributes":{
+         "name":"Medical imaging",
+         "procedure_type":"diagnostic"
+       }
+    }]
+}
