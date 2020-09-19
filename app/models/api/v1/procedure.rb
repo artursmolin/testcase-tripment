@@ -1,6 +1,6 @@
 class Api::V1::Procedure < ApplicationRecord
-  searchkick
+  searchkick word_start: [:name], case_sensitive: false, language: :english
 
-  validates :name
-  validates :procedure_type
+  validate :name
+  validate :procedure_type
 end
