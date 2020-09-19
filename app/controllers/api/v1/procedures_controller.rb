@@ -4,8 +4,20 @@ class Api::V1::ProceduresController < ApplicationController
       params[:name] ||= "*",
       fields: [{ name: :text_middle, name: :word_start }],
       misspellings: false,
-    )
-    response = Api::V1::ProcedureSerializer.new(procedures.results).serialized_json
+    ).results
+
+    # Alternative search
+    procedures = if procedures.any?
+                   procedures
+                 else
+                   Api::V1::Procedure.search(
+                     params[:name] ||= "*",
+                     fields: [{ name: :word_start, name: :text_middle }],
+                     misspellings: false,
+                   ).results
+                 end
+
+    response = Api::V1::ProcedureSerializer.new(procedures).serialized_json
     render json: response
   end
 end
