@@ -21,9 +21,16 @@ gem 'fast_jsonapi'
 
 group :development, :test do
   gem 'pry'
-  gem 'rspec-rails'
   gem 'rubocop-rails'
   gem 'rubocop-performance'
+end
+
+group :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
 
 group :development do

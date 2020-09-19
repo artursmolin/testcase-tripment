@@ -1,7 +1,7 @@
 class Api::V1::ProceduresController < ApplicationController
   def index
     procedures = Api::V1::Procedure.search(
-      params[:name],
+      params[:name] ||= "*",
       fields: [{ name: :text_middle, name: :word_start }],
       misspellings: false,
     )
